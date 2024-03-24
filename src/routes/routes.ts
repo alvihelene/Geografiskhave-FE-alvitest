@@ -1,5 +1,5 @@
 import { IRoute, RouteType } from "../interfaces/IRoute";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HomePage/HomePage.tsx";
 
 export const Routes: IRoute[] = [
   {
