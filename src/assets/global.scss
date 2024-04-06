@@ -1,0 +1,46 @@
+@use "./variable.scss" as v;
+
+* {
+    font-family: v.$defFont;
+}
+
+//Sideoverskrift/01
+h1 {
+    font-size: v.$h1;
+    font-weight: bold;
+}
+
+//Sideoverskrift/01
+h2 {
+    font-size: v.$h2;
+    font-weight: bold;
+}
+//header
+h3 {
+    font-size: v.$h1;
+    font-weight: 600;
+}
+
+p {
+    font-size: v.$regular;
+}
+
+// + for button
+.bold {
+    font-size: v.$regular;
+    font-weight: 600;
+}
+
+.smallText {
+    font-size: v.$small;
+}
+
+.smallBoldText {
+    font-size: v.$small;
+    font-weight: 600;
+}
+
+nav {
+    font-size: v.$nav;
+    font-weight: 500;
+}
