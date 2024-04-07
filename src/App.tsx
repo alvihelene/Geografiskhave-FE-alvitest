@@ -1,8 +1,10 @@
 import "./App.scss";
 import { observer } from "mobx-react-lite";
-import { Routes as routes } from "./routes/routes";
+import { Routes as routes, navRoutes } from "./routes/routes";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
+import Navbar from "./components/shared/navbar/navbar";
+
 const App = () => {
   return (
     <>
@@ -24,6 +26,8 @@ const App = () => {
               )),
           )}
         </Routes>
+
+        <Navbar routes={navRoutes} />
       </div>
     </>
   );
