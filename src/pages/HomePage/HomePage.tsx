@@ -1,9 +1,12 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import "./HomePage.scss";
-
 const HomePage = () => {
-  return <h1>HomePage</h1>;
+  return (
+    <div className="HomePage">
+      <h1>Home Page</h1>
+    </div>
+  );
 };
 
 export default observer(HomePage);
