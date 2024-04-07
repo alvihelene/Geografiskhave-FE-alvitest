@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 // color variables
-    //button + header
+//button + header
 $green: #125f31;
-    // CtA color
+// CtA color
 $orange: #fd8721;
-    // background
+// background
 $lightGreen: #e5ede8;
 $beige: #fff9e8;
-    // text
+// text
 $brown: #371d07;
-    // unknown
+// unknown
 $yellow: #ffd449;
 
+// icon variables
+// orange filter
+$orangeFilter: invert(76%) sepia(52%) saturate(5505%) hue-rotate(345deg)
+  brightness(101%) contrast(98%);
+$brownFilter: invert(10%) sepia(11%) saturate(7489%) hue-rotate(4deg)
+  brightness(99%) contrast(95%);
+
 // fonts
-    //default font
+//default font
 $defFont: "Montserrat", sans-serif;
-    //font size
+//font size
 $h1: 24px;
 $h2: 20px;
 $h3: 18px;

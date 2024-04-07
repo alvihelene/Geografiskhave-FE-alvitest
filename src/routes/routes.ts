@@ -9,3 +9,7 @@ export const Routes: IRoute[] = [
     routeType: RouteType.NAVBAR,
   },
 ];
+
+export const navRoutes = Routes.filter(
+  (route) => route.routeType === RouteType.NAVBAR,
+);

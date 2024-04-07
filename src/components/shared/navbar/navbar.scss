@@ -1,0 +1,49 @@
+.Navbar_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: #fff;
+  flex: 1;
+  width: 100%;
+  z-index: 100;
+  max-width: 768px;
+  max-height: 90px;
+  position: fixed;
+  bottom: 0;
+  .Navbar_Link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #371d07;
+    text-decoration: none;
+    gap: 6px;
+    &_Active {
+      .Navbar_Link_Icon {
+        filter: invert(76%) sepia(52%) saturate(5505%) hue-rotate(345deg)
+          brightness(101%) contrast(98%);
+      }
+      .Navbar_Link_Text {
+        color: orange;
+      }
+    }
+    .Navbar_Link_Icon_Container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .Navbar_Link_Icon {
+        height: 24px;
+        width: 24px;
+        filter: invert(10%) sepia(11%) saturate(7489%) hue-rotate(4deg)
+          brightness(99%) contrast(95%);
+      }
+    }
+    .Navbar_Link_Text {
+      color: #371d07;
+    }
+  }
+}
