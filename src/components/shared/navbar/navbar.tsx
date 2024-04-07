@@ -1,6 +1,7 @@
 import { IRoute } from "../../../interfaces/IRoute";
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
+import logoutIcon from "../../../assets/icons/logout.svg";
 
 const Navbar = ({ routes }: { routes: IRoute[] }) => {
   return (
@@ -19,6 +20,12 @@ const Navbar = ({ routes }: { routes: IRoute[] }) => {
           <p className="Navbar_Link_Text">{route.title}</p>
         </NavLink>
       ))}
+      <button className="Navbar_Link">
+        <div className="Navbar_Link_Icon_Container">
+          <img src={logoutIcon} alt="icon" className="Navbar_Link_Icon" />
+        </div>
+        <p className="Navbar_Link_Text">Log ud</p>
+      </button>
     </nav>
   );
 };

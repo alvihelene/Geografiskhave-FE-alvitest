@@ -1,14 +1,16 @@
+@import "../../../assets/variable.scss";
+
 .Navbar_Container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  padding: 12px;
   height: 90px;
   background-color: #fff;
   flex: 1;
-  width: 100%;
+  width: calc(100% - 24px);
   z-index: 100;
-  max-width: 768px;
+  max-width: calc(768px - 24px);
   max-height: 90px;
   position: fixed;
   bottom: 0;
@@ -17,19 +19,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    color: #371d07;
+    color: $brown;
     text-decoration: none;
     gap: 6px;
-    &_Active {
-      .Navbar_Link_Icon {
-        filter: invert(76%) sepia(52%) saturate(5505%) hue-rotate(345deg)
-          brightness(101%) contrast(98%);
-      }
-      .Navbar_Link_Text {
-        color: orange;
-      }
+    flex: 1;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border: none;
     }
+
     .Navbar_Link_Icon_Container {
       width: 100%;
       display: flex;
@@ -38,12 +40,38 @@
       .Navbar_Link_Icon {
         height: 24px;
         width: 24px;
-        filter: invert(10%) sepia(11%) saturate(7489%) hue-rotate(4deg)
-          brightness(99%) contrast(95%);
+        filter: $brownFilter;
       }
     }
     .Navbar_Link_Text {
-      color: #371d07;
+      color: $brown;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .Navbar_Link_Active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $brown;
+    text-decoration: none;
+    gap: 6px;
+    flex: 1;
+    .Navbar_Link_Icon_Container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .Navbar_Link_Icon {
+        filter: $orangeFilter;
+      }
+    }
+    .Navbar_Link_Text {
+      color: $orange;
+      padding: 0;
+      margin: 0;
     }
   }
 }
