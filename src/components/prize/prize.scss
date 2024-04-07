@@ -1,0 +1,53 @@
+@import "../../assets/variable.scss";
+.Prize {
+  height: 210px;
+  width: 320px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-size: cover;
+  &_Info {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 40px);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    &_CoinContainer {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &_Text {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      &_Title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $brown;
+        margin: 0; // remove default margin
+        padding: 0; // remove default padding
+      }
+      &_Price {
+        margin: 0; // remove default margin
+        padding: 0; // remove default padding
+        font-size: 14px;
+        font-weight: 400;
+        color: $brown;
+      }
+    }
+  }
+}
