@@ -5,6 +5,7 @@ import map from "../assets/icons/map.svg";
 import logout from "../assets/icons/logout.svg";
 import profile from "../assets/icons/user.svg";
 import placeholder from "../assets/icons/placeholder.svg";
+import ProfilePage from "../pages/ProfilePage/ProfilePage.tsx";
 
 export const Routes: IRoute[] = [
   {
@@ -32,7 +33,7 @@ export const Routes: IRoute[] = [
     path: "/profile",
     title: "Profil",
     icon: profile,
-    component: HomePage,
+    component: ProfilePage,
     routeType: RouteType.NAVBAR,
   },
 ];

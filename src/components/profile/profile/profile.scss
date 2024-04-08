@@ -1,0 +1,69 @@
+@import "../../../assets/variable.scss";
+.Profile {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  align-items: center;
+  width: calc(100% - 70px);
+  height: fit-content;
+  background-color: #fff;
+  &_ImageContainer {
+    width: 95px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_InfoContainer {
+    height: 100%;
+    display: flex;
+    flex: 1 0 0;
+    justify-content: center;
+    margin-top: 20px;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      color: $brown;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &_CoinContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 35px;
+    .Profile_CoinWrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: $brown;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $brown;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
