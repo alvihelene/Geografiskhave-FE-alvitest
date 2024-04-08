@@ -2,11 +2,12 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import "./HomePage.scss";
 import FrontpageProfile from "../../components/profile/frontpageProfile/frontpageProfile";
+import Header from "../../components/shared/header/header";
 
 const HomePage = () => {
   return (
     <div className="HomePage">
-      <h1>Home Page</h1>
+      <Header currentPage="Hjem" />
       <FrontpageProfile />
     </div>
   );
