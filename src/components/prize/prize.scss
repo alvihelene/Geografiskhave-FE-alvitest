@@ -2,12 +2,14 @@
 .Prize {
   height: 210px;
   width: 320px;
+  min-height: 210px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
   background-size: cover;
+  background-position: center;
   &_Info {
     display: flex;
     flex-direction: row;
@@ -19,8 +21,8 @@
     background-color: #fff;
     border-radius: 0 0 20px 20px;
     &_CoinContainer {
-      width: 45px;
-      height: 45px;
+      width: 30px;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
