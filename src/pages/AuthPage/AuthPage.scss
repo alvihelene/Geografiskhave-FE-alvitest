@@ -1,0 +1,71 @@
+@import "../../assets/variable.scss";
+
+.AuthPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: $lightGreen;
+  gap: 50px;
+  padding: 35px;
+  &_Welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    color: $green;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  &_Image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &_Paragraph {
+    color: $brown;
+    font-size: 16px;
+    text-align: center;
+    word-wrap: break-word;
+    margin: 0;
+  }
+  &_Interaction {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &_Button {
+      flex: 1;
+      padding: 15px;
+      border-radius: 40px;
+      background: #fff;
+      border: 1px solid $green;
+      color: $green;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        outline: none;
+        border: 1px solid $green;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $green;
+      }
+    }
+    .Tilmeld {
+      background: $green;
+      color: #fff;
+    }
+  }
+}

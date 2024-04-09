@@ -1,9 +1,16 @@
 import { IRoute } from "../../../interfaces/IRoute";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.scss";
 import logoutIcon from "../../../assets/icons/logout.svg";
 
 const Navbar = ({ routes }: { routes: IRoute[] }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/auth/login");
+  }
+
   return (
     <nav className="Navbar_Container">
       {routes.map((route, index) => (
@@ -20,7 +27,7 @@ const Navbar = ({ routes }: { routes: IRoute[] }) => {
           <p className="Navbar_Link_Text">{route.title}</p>
         </NavLink>
       ))}
-      <button className="Navbar_Link">
+      <button className="Navbar_Link" onClick={() => handleLogout()}>
         <div className="Navbar_Link_Icon_Container">
           <img src={logoutIcon} alt="icon" className="Navbar_Link_Icon" />
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import "./HomePage.scss";
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="HomePage">
       <h1>Home Page</h1>

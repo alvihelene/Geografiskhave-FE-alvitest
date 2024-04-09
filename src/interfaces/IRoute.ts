@@ -1,9 +1,9 @@
-import { ComponentType } from "react";
+import { ReactNode } from "react";
 
 export interface IRoute {
   path: string;
   title: string;
-  component: ComponentType;
+  component: ReactNode;
   icon?: any;
   children?: IRoute[];
   isAuth?: boolean;
@@ -14,4 +14,5 @@ export enum RouteType {
   NAVBAR = "navbar",
   DROPDOWN = "dropdown",
   INTERNAL = "internal",
+  AUTH = "auth",
 }
