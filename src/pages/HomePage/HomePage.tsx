@@ -2,8 +2,6 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import "./HomePage.scss";
 
-import Button from "../../components/shared/buttons/button";
-
 const HomePage = () => {
   return (
     <div className="HomePage">
