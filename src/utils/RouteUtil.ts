@@ -2,16 +2,41 @@ import { Routes as routes } from "../routes/routes";
 import { IRoute, RouteType } from "../interfaces/IRoute";
 
 export const routeHasNavbar = (route: string) => {
-  const lookedUpRoute = routes.find((r: IRoute) => r.path === route) || routes[0].children?.find((r: IRoute) => r.path === route);
+  const lookedUpRoute = findRoute(route);
 
   if (!lookedUpRoute) {
     return false;
   }
-
   return lookedUpRoute.routeType !== RouteType.AUTH;
 };
 
+export const findRoute = (route: string) => {
+  let foundRoute: IRoute | undefined;
+
+  routes.map((r: IRoute) => {
+    if (r.path === route) {
+      foundRoute = r;
+    }
+    if (r.children) {
+      r.children.map((child) => {
+        if (r.path + child.path === route) {
+          foundRoute = child;
+        }
+        if (child.children) {
+          child.children.map((grandChild) => {
+            if (r.path + child.path + grandChild.path === route) {
+              foundRoute = grandChild;
+            }
+          });
+        }
+      });
+    }
+  });
+  return foundRoute;
+};
+
 export const transformRoutes = (routes: IRoute[]) => {
+  console.log(routes);
   return routes.map((route: IRoute) => {
     if (route.children) {
       return {
@@ -31,7 +56,7 @@ export const transformRoutes = (routes: IRoute[]) => {
             };
           } else {
             return {
-              path:  child.path,
+              path: child.path,
               element: child.component,
             };
           }

@@ -9,40 +9,41 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage.tsx";
 import AuthPage from "../pages/AuthPage/AuthPage.tsx";
 import App from "../App.tsx";
 import React from "react";
+import SignInPage from "../pages/AuthPage/SignInPage/SignInPage.tsx";
 
 export const Routes: IRoute[] = [
   {
     path: "/",
     title: "app",
-    component: <App/>,
+    component: <App />,
     routeType: RouteType.INTERNAL,
     children: [
       {
         path: "",
         title: "Hjem",
         icon: home,
-        component: <HomePage/>,
+        component: <HomePage />,
         routeType: RouteType.NAVBAR,
       },
       {
         path: "/map",
         title: "Find vej",
         icon: map,
-        component: <HomePage/>,
+        component: <HomePage />,
         routeType: RouteType.NAVBAR,
       },
       {
         path: "/placeholder",
         title: "Skattejagt",
         icon: placeholder,
-        component: <HomePage/>,
+        component: <HomePage />,
         routeType: RouteType.NAVBAR,
       },
       {
         path: "/profile",
         title: "Profil",
         icon: profile,
-        component: <ProfilePage/>,
+        component: <ProfilePage />,
         routeType: RouteType.NAVBAR,
       },
       //TODO: REMOVE THIS IN PRODUCTION
@@ -50,32 +51,30 @@ export const Routes: IRoute[] = [
         path: "/test",
         title: "Test",
         routeType: RouteType.INTERNAL,
-        component: <TestPage/>,
+        component: <TestPage />,
       },
       {
         path: "/auth",
         title: "Auth",
         routeType: RouteType.AUTH,
-        component: <AuthPage/>,
-        children: [
-          {
-            path: "/login",
-            title: "Login",
-            component: <AuthPage/>,
-            routeType: RouteType.AUTH,
-          },
-          {
-            path: "/register",
-            title: "Register",
-            component: <AuthPage/>,
-            routeType: RouteType.AUTH,
-          },
-        ],
+        component: <AuthPage />,
+      },
+      {
+        path: "/login",
+        title: "Login",
+        component: <SignInPage />,
+        routeType: RouteType.AUTH,
+      },
+      {
+        path: "/register",
+        title: "Register",
+        component: <AuthPage />,
+        routeType: RouteType.AUTH,
       },
     ],
   },
 ];
 
 export const navRoutes = Routes[0].children!.filter(
-  (route) => route.routeType === RouteType.NAVBAR
+  (route) => route.routeType === RouteType.NAVBAR,
 );

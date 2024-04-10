@@ -13,6 +13,7 @@ const App = () => {
 
   useEffect(() => {
     handleRouteChange();
+    console.log("location changed");
   }, [location]);
 
   const handleRouteChange = () => {

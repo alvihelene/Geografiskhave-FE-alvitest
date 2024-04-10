@@ -8,8 +8,8 @@ const Navbar = ({ routes }: { routes: IRoute[] }) => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/auth/login");
-  }
+    navigate("/login");
+  };
 
   return (
     <nav className="Navbar_Container">

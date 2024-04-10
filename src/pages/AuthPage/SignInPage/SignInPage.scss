@@ -1,0 +1,138 @@
+@import "../../../assets/variable.scss";
+
+.SignIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  padding: 35px;
+  &_Back {
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    border-radius: 50%;
+    margin: 0;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 36px;
+  }
+  &_Container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    &_Welcome {
+      font-size: 24px;
+      font-weight: bold;
+      color: $green;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+    &_Paragraph {
+      font-size: 16px;
+      color: $brown;
+      margin: 0;
+      text-align: center;
+    }
+    &_Form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+
+      gap: 20px;
+      input {
+        padding: 15px;
+        width: calc(100% - 30px);
+        border-radius: 40px;
+        background-color: #fff;
+        color: $brown;
+        border: none;
+        outline: none;
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $grey;
+        }
+      }
+      &_Container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &_RememberMe {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          input {
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+          }
+          label {
+            margin: 0;
+            color: $grey;
+          }
+        }
+        &_Forgot {
+          color: $orange;
+          font-size: 14px;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &_Interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    &_Button {
+      padding: 15px;
+      width: calc(100% - 30px);
+      border-radius: 40px;
+      background-color: $green;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        outline: none;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &_Paragraph {
+      color: $grey;
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin: 0;
+      &_Link {
+        color: $orange;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

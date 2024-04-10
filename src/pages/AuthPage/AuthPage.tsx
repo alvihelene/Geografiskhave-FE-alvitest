@@ -11,9 +11,7 @@ const AuthPage = () => {
     //navigate("/register");
   };
   const handleLogin = () => {
-    navigate("/");
-    //TODO: navigate to login page
-    //navigate("/login");
+    navigate("/login");
   };
 
   return (
