@@ -10,7 +10,7 @@ import AuthPage from "../pages/AuthPage/AuthPage.tsx";
 import App from "../App.tsx";
 import React from "react";
 import SignInPage from "../pages/AuthPage/SignInPage/SignInPage.tsx";
-
+import SignUpPage from "../pages/AuthPage/SignUpPage/SignUpPage.tsx";
 export const Routes: IRoute[] = [
   {
     path: "/",
@@ -68,7 +68,7 @@ export const Routes: IRoute[] = [
       {
         path: "/register",
         title: "Register",
-        component: <AuthPage />,
+        component: <SignUpPage />,
         routeType: RouteType.AUTH,
       },
     ],
