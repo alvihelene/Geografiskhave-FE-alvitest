@@ -1,0 +1,81 @@
+@import "../../../assets/variable.scss";
+
+.frontPageProfile_Container {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  height: 130px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  gap: 6px;
+  border-radius: 0 0 20px 20px;
+
+  .frontpageProfile_ImageContainer {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .frontpageProfile_InfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    gap: 6px;
+    justify-content: center;
+    .frontpageProfile_Greeting {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: $brown;
+      margin: 0;
+      padding: 0;
+    }
+    .frontpageProfile_Username {
+      color: $brown;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .frontpageProfile_CoinContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+
+    .frontpageProfile_CoinWrapper {
+      height: 40px;
+      padding: 0 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      background-color: $beige;
+      border-radius: 40px;
+      justify-content: center;
+      align-items: center;
+
+      .frontpageProfile_CoinIcon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .frontpageProfile_CoinText {
+        font-weight: 600;
+        color: $brown;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
