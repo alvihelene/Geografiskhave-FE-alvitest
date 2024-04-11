@@ -7,8 +7,15 @@
     background-color: white;
     text-align: center;
     padding-top: 150px;
+    pointer-events: none;
+    transition: opacity .8s;
 }
 
 .logo {
-    width: 40%;
+    width: 60%;
+    max-width: 400px;
+}
+
+.loaded {
+    opacity: 0%;
 }
