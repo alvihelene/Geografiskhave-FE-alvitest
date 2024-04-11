@@ -1,15 +1,17 @@
 import React from "react";
 import Input from "../../components/shared/inputField/input";
 import backIcon from "../../assets/icons/backIcon.svg";
+import TreasureHunt from "../../components/shared/treasureHuntHomePage/treasureHunt";
 
 const TestPage = () => {
   return (
     <div>
-      <Input
+      {/* <Input
         placeholder={"Password"}
         onChange={(e) => console.log(e.target.value)}
         icon={backIcon}
-      />
+      /> */}
+      <TreasureHunt />
     </div>
   );
 };
