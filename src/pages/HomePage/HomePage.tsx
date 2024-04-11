@@ -1,7 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import "./HomePage.scss";
-import Splash from "../../components/spalsh/splashThing";
 
 const HomePage = () => {
   return (
