@@ -1,7 +1,8 @@
 .Splash {
-    z-index: 100000;
+    z-index: 1000;
     position: fixed;
-    width: 770px;
+    max-width: 768px;
+    width: 100%;
     height: 100%;
     background-color: white;
     text-align: center;
