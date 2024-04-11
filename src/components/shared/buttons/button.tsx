@@ -4,7 +4,7 @@ import "./button.scss"
  
 const Button = ({ text, size, color }: IButton) => {
   return (
-    <button className={`${size=="small"? "smallBoldText": "bold"} ${size} ${color}`}>{text}</button>
+    <button className={`defButton ${size=="small"? "smallBoldText": "bold"} ${size} ${color}`}>{text}</button>
   );
 };
 

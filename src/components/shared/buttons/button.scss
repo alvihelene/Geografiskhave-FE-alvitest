@@ -1,6 +1,6 @@
 @use "../../../assets/variable.scss" as v;
 
-button {
+.defButton {
     background-color: v.$green;
     font-size: v.$regular;
     border-radius: 100px;
