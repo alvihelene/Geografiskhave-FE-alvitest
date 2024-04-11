@@ -6,10 +6,9 @@ const Splash = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate loading time
     const timeout = setTimeout(() => {
       setLoaded(true);
-    }, 1000); // Adjust the time as needed
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, []);
