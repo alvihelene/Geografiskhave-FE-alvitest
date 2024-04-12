@@ -21,39 +21,80 @@
       justify-content: center;
       align-items: flex-end;
     }
+
     .TreasureHunt_InfoContainer {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       background-color: v.$lightGreen;
       color: v.$brown;
       border-radius: inherit;
-      width: 90%;
+      width: 80%;
       margin-bottom: 15px;
+      padding: 15px 20px 8px 20px;
+ 
+
+      .TreasureHunt_InfoContainer_Content_Text {
+        margin: 0;
+      }
 
       .TreasureHunt_InfoContainer_Header {
-        margin-top: 10px;
-        margin-left: 20px;
+        margin: 0;
+    
         font-weight: 700;
       }
 
       .TreasureHunt_InfoContainer_Content {
         display: flex;
+        column-gap: 5px;
+        
       }
 
+      
       .Left1,
       .Right1 {
         font-weight: 600;
+        margin: 0;
       }
-
-      .Left1 {
-        margin-left: 20px;
-      }
-
+      
+      
       .Right1 {
-        margin-left: 5px;
         color: v.$grey;
       }
+      
+      
+      .TreasureHunt_InfoContainer_Progress {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+      
+
+        .Progressbar {
+          display: flex;
+          flex-direction:row;
+          align-items: center;
+          column-gap: 10px;
+          
+        }
+         .Line {
+          background: v.$darkOrange;
+          width: 160px;
+          height: 7px;
+          border-radius: 5px;
+
+          .Line_Taskprogress {
+            width: 60%;
+            height: inherit;
+            border-radius: inherit;
+            background:v.$orange;
+          }
+        }
+        .TasksProgress {
+          color: v.$orange;
+         }
+      }
+      
     }
   }
 }
