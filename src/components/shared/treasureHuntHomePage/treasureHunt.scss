@@ -12,24 +12,48 @@
       background-image: url("../../../assets//images/homepageimg.png");
       background-size: 100% 115%;
       background-repeat: no-repeat;
-      background-position:bottom;
+      background-position: bottom;
       border-radius: 24px;
       width: 320px;
       height: 210px;
+
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: flex-end;
     }
     .TreasureHunt_InfoContainer {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background-color: v.$lightGreen;
       color: v.$brown;
       border-radius: inherit;
+      width: 90%;
+      margin-bottom: 15px;
 
-      padding: 10px 10px;
-      width: 85%;
-      margin: auto;
-      margin-bottom: 20px;
+      .TreasureHunt_InfoContainer_Header {
+        margin-top: 10px;
+        margin-left: 20px;
+        font-weight: 700;
+      }
+
+      .TreasureHunt_InfoContainer_Content {
+        display: flex;
+      }
+
+      .Left1,
+      .Right1 {
+        font-weight: 600;
+      }
+
+      .Left1 {
+        margin-left: 20px;
+      }
+
+      .Right1 {
+        margin-left: 5px;
+        color: v.$grey;
+      }
     }
   }
 }

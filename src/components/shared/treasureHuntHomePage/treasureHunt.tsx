@@ -8,13 +8,16 @@ const TreasureHunt = () => {
 
         <div className="TreasureHunt_ImageContainer">
           <div className="TreasureHunt_InfoContainer">
-            <div className="left">
-              <p>Left Content 1</p>
-              <p>Left Content 2</p>
-            </div>
-            <div className="right">
-              <p>Right Content 1</p>
-              <p>Right Content 2</p>
+            <p className="TreasureHunt_InfoContainer_Header">
+              Geografisk eventyr
+            </p>
+            <div className="TreasureHunt_InfoContainer_Content">
+              <div className="Left1">
+                <p>Opgave 4 |</p>
+              </div>
+              <div className="Right1">
+                <p>Naturhaven</p>
+              </div>
             </div>
           </div>
         </div>
