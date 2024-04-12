@@ -6,11 +6,11 @@ import TreasureHunt from "../../components/shared/treasureHuntHomePage/treasureH
 const TestPage = () => {
   return (
     <div>
-      {/* <Input
+      <Input
         placeholder={"Password"}
         onChange={(e) => console.log(e.target.value)}
         icon={backIcon}
-      /> */}
+      />
       <TreasureHunt />
     </div>
   );
