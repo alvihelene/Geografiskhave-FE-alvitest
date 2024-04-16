@@ -1,7 +1,7 @@
 import React from "react";
 import "./frontpageProfile.scss";
 import ProfilePic from "../shared/profilePic/profilePic";
-
+import Mønt from "../../../assets/Mønt.png";
 const frontpageProfile = () => {
   //TODO: ADD STORE IMPLEMENTATION
   return (
@@ -19,12 +19,7 @@ const frontpageProfile = () => {
       </div>
       <div className="frontpageProfile_CoinContainer">
         <div className="frontpageProfile_CoinWrapper">
-          {/* TODO: ADD ICON */}
-          <img
-            src="https://via.placeholder.com/50"
-            alt="coin"
-            className="frontpageProfile_CoinIcon"
-          />
+          <img src={Mønt} alt="coin" className="frontpageProfile_CoinIcon" />
           <p className="frontpageProfile_CoinText">100</p>
         </div>
       </div>

@@ -1,0 +1,108 @@
+@import "../../../assets/variable.scss";
+
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 35px;
+  position: relative;
+
+  &_Back {
+    position: absolute;
+    top: 70px;
+    left: 35px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    border-radius: 50%;
+    margin: 0;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 36px;
+  }
+
+  &_Container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_Title {
+      color: $green;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+    &_Paragraph {
+      color: $brown;
+      font-size: 16px;
+      margin: 0;
+      text-align: center;
+    }
+    &_Form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px;
+      gap: 20px;
+      &_Input {
+        width: calc(100% - 30px);
+        padding: 15px;
+        border-radius: 40px;
+        background-color: #fff;
+        border: none;
+        color: $brown;
+        &::placeholder {
+          color: $grey;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &_Interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    &_Button {
+      background-color: $green;
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      padding: 15px;
+      width: 100%;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        outline: none;
+      }
+    }
+    &_Paragraph {
+      color: $grey;
+      font-size: 14px;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      &_Link {
+        color: $orange;
+
+        text-decoration: underline;
+      }
+    }
+  }
+}

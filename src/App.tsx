@@ -1,33 +1,32 @@
 import "./App.scss";
 import { observer } from "mobx-react-lite";
 import { Routes as routes, navRoutes } from "./routes/routes";
-import { Routes, Route } from "react-router-dom";
-import React from "react";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/shared/navbar/navbar";
+import { routeHasNavbar } from "./utils/RouteUtil";
 
 const App = () => {
+  const [renderNavbar, setRenderNavbar] = useState(true);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    handleRouteChange();
+    console.log("location changed");
+  }, [location]);
+
+  const handleRouteChange = () => {
+    const currentPath = location.pathname;
+    setRenderNavbar(routeHasNavbar(currentPath));
+  };
   return (
     <>
       <div className="Container">
-        <Routes>
-          {routes.map((route, index) => (
-            <React.Fragment key={index}>
-              <Route path={route.path} element={<route.component />} />
-            </React.Fragment>
-          ))}
-
-          {routes.map(
-            (route, index) =>
-              route.children !== undefined &&
-              route.children.map((child, childIndex) => (
-                <React.Fragment key={`${index}-${childIndex}`}>
-                  <Route path={child.path} element={<child.component />} />
-                </React.Fragment>
-              )),
-          )}
-        </Routes>
-
-        <Navbar routes={navRoutes} />
+        <div className="Wrapper">
+          <Outlet />
+        </div>
+        {renderNavbar && <Navbar routes={navRoutes} />}
       </div>
     </>
   );

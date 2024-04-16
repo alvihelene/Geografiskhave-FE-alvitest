@@ -1,6 +1,6 @@
-import React from "react";
 import { IProfileImage } from "../../../../interfaces/IProfileImage";
 import "./profilePic.scss";
+import edit from "../../../../assets/icons/edit.svg";
 const profilePic = ({ imgSrc, alt, onClick, editable }: IProfileImage) => {
   return (
     <div className="ProfilePic_Container">
@@ -11,7 +11,9 @@ const profilePic = ({ imgSrc, alt, onClick, editable }: IProfileImage) => {
         className="ProfilePic"
       />
       {editable && (
-        <div className="ProfilePic_Overlay">{/* TODO: ADD ICON */}x</div>
+        <div className="ProfilePic_Overlay">
+          <img src={edit} alt="edit" />{" "}
+        </div>
       )}
     </div>
   );

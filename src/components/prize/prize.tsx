@@ -1,5 +1,7 @@
 import "./prize.scss";
 import { IPrize } from "../../interfaces/IPrize";
+import Mønt from "../../assets/Mønt.png";
+
 const Prize = ({ name, price, imageUrl }: IPrize) => {
   const getCoinText = (price: number) => {
     return price > 0 ? price.toString() + " Eventyrmønter" : "Gratis præmie";
@@ -10,8 +12,7 @@ const Prize = ({ name, price, imageUrl }: IPrize) => {
       <div className="Prize_Info">
         {price > 0 && (
           <div className="Prize_Info_CoinContainer">
-            {/* TODO: Add image of coin */}
-            <img src="https://picsum.photos/45/45" alt="mønt" />
+            <img src={Mønt} alt="mønt" />
           </div>
         )}
         <div className="Prize_Info_Text">
