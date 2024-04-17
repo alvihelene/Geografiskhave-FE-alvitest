@@ -1,4 +1,8 @@
-.ProfilePic1_Container {
-  width: 100px;
-  height: 100px;
+@use "../../assets/variable.scss" as v;
+
+.frontpage_content {
+  margin-left: 50px;
+  margin-right: 50px;
+  color: v.$brown;
 }
+

@@ -8,7 +8,12 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <FrontpageProfile/>
-      <TreasureHunt/>
+      <div className="frontpage_content">
+        <TreasureHunt/>
+        <div>
+          <h2>Praktisk</h2>
+        </div>
+      </div>
     </div>
   );
 };
