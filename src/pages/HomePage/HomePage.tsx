@@ -34,9 +34,6 @@ const HomePage = () => {
             icon={FAQ}
             link="https://geografiskhave.dk/godt-at-vide/"/>
           </div>
-          <Button
-          text="bob"
-          onClick={() => {console.log("bob")}}/>
         </div>
       </div>
     </div>
