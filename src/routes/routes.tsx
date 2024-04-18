@@ -30,7 +30,7 @@ export const Routes: IRoute[] = [
         routeType: RouteType.NAVBAR,
       },
       {
-        path: "/map",
+        path: "/kort",
         title: "Find vej",
         icon: map,
         component: <MapPage />,
@@ -44,7 +44,7 @@ export const Routes: IRoute[] = [
         routeType: RouteType.NAVBAR,
       },
       {
-        path: "/profile",
+        path: "/profil",
         title: "Profil",
         icon: profile,
         component: <ProfilePage />,
@@ -70,7 +70,7 @@ export const Routes: IRoute[] = [
         routeType: RouteType.AUTH,
       },
       {
-        path: "/register",
+        path: "/tilmeld",
         title: "Register",
         component: <SignUpPage />,
         routeType: RouteType.AUTH,
