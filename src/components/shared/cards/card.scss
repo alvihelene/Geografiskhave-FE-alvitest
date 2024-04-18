@@ -1,0 +1,24 @@
+@use "../../../assets/variable.scss" as v;
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    color: v.$brown;
+    border: none;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+
+    img {
+        width: 100px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    p {
+        margin: 0px;
+        
+    }
+}
