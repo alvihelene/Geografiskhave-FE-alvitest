@@ -1,9 +1,22 @@
 import React from "react";
 import "./SignInPage.scss";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useStore } from "../../../stores/store";
+import { useState } from "react";
 const SignInPage = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { authStore } = useStore();
+
+  const handleSignIn = async () => {
+    const user = {
+      email: email,
+      password: password,
+    };
+
+    await authStore.loginUser(user);
+  };
 
   const handleGoBack = () => {
     navigate("/auth");
@@ -20,8 +33,16 @@ const SignInPage = () => {
           Velkommen tilbage! Log ind for at forsætte med dit eventyr.{" "}
         </p>
         <div className="SignIn_Container_Form">
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="Adgangskode" />
+          <input
+            type="text"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Adgangskode"
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <div className="SignIn_Container_Form_Container">
             <div className="SignIn_Container_Form_Container_RememberMe">
               <input type="checkbox" id="checkbox" />
@@ -35,7 +56,9 @@ const SignInPage = () => {
       </div>
 
       <div className="SignIn_Interaction">
-        <button className="SignIn_Interaction_Button">Log ind</button>
+        <button className="SignIn_Interaction_Button" onClick={handleSignIn}>
+          Log ind
+        </button>
         <p className="SignIn_Interaction_Paragraph">
           Har du ikke en konto?
           <Link to="/register" className="SignIn_Interaction_Paragraph_Link">

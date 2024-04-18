@@ -4,6 +4,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
+  signInWithEmailAndPassword,
   User,
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
@@ -23,7 +24,7 @@ const auth = getAuth();
 export class AuthStore {
   @observable user: User | null = null;
 
-  @action setUser(user: User) {
+  @action setUser(user: User | null) {
     this.user = user;
   }
 
@@ -31,13 +32,25 @@ export class AuthStore {
     await createUserWithEmailAndPassword(auth, user.email, user.password);
     await updateProfile(auth.currentUser!, { displayName: user.name }).then(
       async () => {
-        await registerUser({ id: auth.currentUser!.uid })
-          .then((response) => console.log(response))
-          .then(() => this.setUser(auth.currentUser!));
+        await registerUser({ id: auth.currentUser!.uid }).then(() =>
+          this.setUser(auth.currentUser!),
+        );
       },
     );
+  }
 
-    console.log(this.user);
+  @action async loginUser(user: IUserFirebase) {
+    await signInWithEmailAndPassword(auth, user.email, user.password).then(
+      () => {
+        this.setUser(auth.currentUser!);
+      },
+    );
+  }
+
+  @action async signOut() {
+    await auth.signOut().then(() => {
+      this.setUser(null);
+    });
   }
 
   constructor() {
