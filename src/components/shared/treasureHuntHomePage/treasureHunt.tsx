@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import "./treasureHunt.scss";
 
+
+
 const TreasureHunt = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/skattejagt");
+  } 
+
   return (
-    <div className="TreasureHunt">
+    <div className="TreasureHunt" onClick={handleClick}>
       <div className="TreasureHunt_Container">
-        <h2>Start skattejagt</h2>
 
         <div className="TreasureHunt_ImageContainer">
           <div className="TreasureHunt_InfoContainer">
