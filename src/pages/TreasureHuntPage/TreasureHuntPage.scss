@@ -1,0 +1,43 @@
+@use "../../assets/variable.scss" as v;
+
+.TreasureHuntPage {
+  .TreasureHuntPage_ImageContainer {
+    height: 300px;
+    width: 100%;
+    background-image: url("../../assets/images/homepageimg.png");
+    background-size: cover;
+  }
+  .TreasureHuntPage_ContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: v.$brown;
+    padding: 30px;
+  }
+  .TreasureHuntPage_ContentContainer_Header {
+    align-self: flex-start;
+    font-size: v.$h2;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .TreasureHuntPage_ContentContainer_Icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: inherit;
+    margin-bottom: 20px;
+    color: v.$orange;
+
+    .Time_Icon,
+    .Distance_Icon {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  .TreasureHuntPage_ContentContainer_StartButton {
+    width: 100%;
+  }
+}
