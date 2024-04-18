@@ -7,3 +7,9 @@ export interface IUserFirebase {
 export interface IUserDTO {
   id: string;
 }
+
+export interface IUser {
+  id: string;
+  points: number;
+  currentTask: any;
+}

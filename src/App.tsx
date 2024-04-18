@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/shared/navbar/navbar";
 import { routeHasNavbar } from "./utils/RouteUtil";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useStore } from "./stores/store";
 
 const App = () => {
   const [renderNavbar, setRenderNavbar] = useState(true);
@@ -13,7 +14,9 @@ const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  onAuthStateChanged(auth, (user) => {
+  const { authStore } = useStore();
+
+  onAuthStateChanged(auth, async (user) => {
     if (user) {
       if (
         location.pathname === "/auth" ||
@@ -21,6 +24,12 @@ const App = () => {
         location.pathname === "/register"
       ) {
         navigate("/");
+      }
+      if (authStore.userFirebase === null) {
+        authStore.setUserFirebase(user);
+      }
+      if (authStore.user === null) {
+        await authStore.getUser(user.uid);
       }
     }
   });
