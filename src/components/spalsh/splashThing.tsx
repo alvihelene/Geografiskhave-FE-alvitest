@@ -8,7 +8,7 @@ const Splash = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoaded(true);
-    }, 100);
+    }, 500);
 
     return () => clearTimeout(timeout);
   }, []);
