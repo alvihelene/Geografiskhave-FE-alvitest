@@ -11,6 +11,10 @@ import App from "../App.tsx";
 import React from "react";
 import SignInPage from "../pages/AuthPage/SignInPage/SignInPage.tsx";
 import SignUpPage from "../pages/AuthPage/SignUpPage/SignUpPage.tsx";
+import TreasureHunt from "../components/shared/treasureHuntHomePage/treasureHunt.tsx";
+import TreasureHuntPage from "../pages/TreasureHuntPage/TreasureHuntPage.tsx";
+import MapPage from "../pages/MapPage/MapPage.tsx";
+
 export const Routes: IRoute[] = [
   {
     path: "/",
@@ -29,14 +33,14 @@ export const Routes: IRoute[] = [
         path: "/map",
         title: "Find vej",
         icon: map,
-        component: <HomePage />,
+        component: <MapPage />,
         routeType: RouteType.NAVBAR,
       },
       {
-        path: "/placeholder",
+        path: "/skattejagt",
         title: "Skattejagt",
         icon: placeholder,
-        component: <HomePage />,
+        component: <TreasureHuntPage />,
         routeType: RouteType.NAVBAR,
       },
       {

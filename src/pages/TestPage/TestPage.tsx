@@ -1,21 +1,19 @@
 import React from "react";
-import "./TestPage.scss"
-import Card from "../../components/shared/cards/card"
-import Ticket from "../../assets/icons/ticket.svg"
+import Input from "../../components/shared/inputField/input";
+import backIcon from "../../assets/icons/backIcon.svg";
+import TreasureHunt from "../../components/shared/treasureHuntHomePage/treasureHunt";
 
 const TestPage = () => {
-  return <div className="test">
-    <Card
-    text="bob"
-    icon={Ticket}
-    link=""
-    />
-    <Card
-    text="bob"
-    icon={Ticket}
-    link=""
-    />
-  </div>;
+  return (
+    <div>
+      <Input
+        placeholder={"Password"}
+        onChange={(e) => console.log(e.target.value)}
+        icon={backIcon}
+      />
+      <TreasureHunt></TreasureHunt>
+    </div>
+  );
 };
 
 export default TestPage;

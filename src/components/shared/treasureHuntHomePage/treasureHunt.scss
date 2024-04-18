@@ -1,0 +1,100 @@
+@use "../../../assets/variable.scss" as v;
+
+.TreasureHunt {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  color: v.$brown;
+
+  .TreasureHunt_Container {
+    .TreasureHunt_ImageContainer {
+      background-image: url("../../../assets//images/homepageimg.png");
+      background-size: 100% 115%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      border-radius: 24px;
+      width: 320px;
+      height: 210px;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .TreasureHunt_InfoContainer {
+      display: flex;
+      flex-direction: column;
+      background-color: v.$lightGreen;
+      color: v.$brown;
+      border-radius: inherit;
+      width: 80%;
+      margin-bottom: 15px;
+      padding: 15px 20px 8px 20px;
+ 
+
+      .TreasureHunt_InfoContainer_Content_Text {
+        margin: 0;
+      }
+
+      .TreasureHunt_InfoContainer_Header {
+        margin: 0;
+    
+        font-weight: 700;
+      }
+
+      .TreasureHunt_InfoContainer_Content {
+        display: flex;
+        column-gap: 5px;
+        
+      }
+
+      
+      .Left1,
+      .Right1 {
+        font-weight: 600;
+        margin: 0;
+      }
+      
+      
+      .Right1 {
+        color: v.$grey;
+      }
+      
+      
+      .TreasureHunt_InfoContainer_Progress {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+      
+
+        .Progressbar {
+          display: flex;
+          flex-direction:row;
+          align-items: center;
+          column-gap: 10px;
+          
+        }
+         .Line {
+          background: v.$darkOrange;
+          width: 160px;
+          height: 7px;
+          border-radius: 5px;
+
+          .Line_Taskprogress {
+            width: 60%;
+            height: inherit;
+            border-radius: inherit;
+            background:v.$orange;
+          }
+        }
+        .TasksProgress {
+          color: v.$orange;
+         }
+      }
+      
+    }
+  }
+}
