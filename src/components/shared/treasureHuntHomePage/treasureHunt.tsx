@@ -10,7 +10,7 @@ const TreasureHunt = () => {
   } 
 
   return (
-    <div className="TreasureHunt" onClick={() => {handleClick}}>
+    <div className="TreasureHunt" onClick={handleClick}>
       <div className="TreasureHunt_Container">
 
         <div className="TreasureHunt_ImageContainer">
