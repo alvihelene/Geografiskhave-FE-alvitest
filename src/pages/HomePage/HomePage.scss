@@ -4,5 +4,17 @@
   margin-left: 50px;
   margin-right: 50px;
   color: v.$brown;
+
+  .single-container {
+    display: flex;
+  }
+
+  .double-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 }
+
 

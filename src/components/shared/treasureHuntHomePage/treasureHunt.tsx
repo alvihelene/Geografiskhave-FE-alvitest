@@ -4,7 +4,6 @@ const TreasureHunt = () => {
   return (
     <div className="TreasureHunt">
       <div className="TreasureHunt_Container">
-        <h2>Start skattejagt</h2>
 
         <div className="TreasureHunt_ImageContainer">
           <div className="TreasureHunt_InfoContainer">
