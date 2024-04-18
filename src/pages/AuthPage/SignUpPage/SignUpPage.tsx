@@ -3,6 +3,7 @@ import "./SignUpPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../../stores/store";
 import { IUserFirebase } from "../../../interfaces/IUser";
+import Input from "../../../components/shared/inputField/input";
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -36,22 +37,22 @@ const SignUpPage = () => {
           Velkommen til! Tilmeld dig for at begynde dit eventyr.
         </p>
         <form className="SignUp_Container_Form">
-          <input
+          <Input
             type="text"
-            className="SignUp_Container_Form_Input"
             placeholder="Fornavn"
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <input
+          <Input
             type="email"
-            className="SignUp_Container_Form_Input"
             placeholder="Email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
+          <Input
             type="password"
-            className="SignUp_Container_Form_Input"
-            placeholder="Password"
+            placeholder="Adgangskode"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </form>

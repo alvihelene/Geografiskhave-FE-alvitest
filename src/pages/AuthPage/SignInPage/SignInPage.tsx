@@ -1,8 +1,10 @@
-import React from "react";
 import "./SignInPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../../stores/store";
 import { useState } from "react";
+import Input from "../../../components/shared/inputField/input";
+import placeholder from "../../../assets/icons/placeholder.svg";
+
 const SignInPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -33,15 +35,18 @@ const SignInPage = () => {
           Velkommen tilbage! Log ind for at forsætte med dit eventyr.{" "}
         </p>
         <div className="SignIn_Container_Form">
-          <input
-            type="text"
+          <Input
+            type="email"
             placeholder="Email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
+          <Input
             type="password"
             placeholder="Adgangskode"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
+            icon={placeholder}
           />
           <div className="SignIn_Container_Form_Container">
             <div className="SignIn_Container_Form_Container_RememberMe">
