@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../../stores/store";
 import { IUserFirebase } from "../../../interfaces/IUser";
 import Input from "../../../components/shared/inputField/input";
+import back from "../../../assets/icons/backIcon.svg";
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const SignUpPage = () => {
   return (
     <div className="SignUp">
       <div className="SignUp_Back" onClick={() => handleGoBack()}>
-        &lt;-
+        <img src={back} alt="back" />
       </div>
       <div className="SignUp_Container">
         <h1 className="SignUp_Container_Title">Tilmeld</h1>
