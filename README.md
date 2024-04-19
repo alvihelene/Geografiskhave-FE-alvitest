@@ -56,5 +56,5 @@ I projektet gør vi brug af nogle ENV variabler. Disse er nødvendige at være t
 </p>
 
 ```sh
-VITE_API_URL="INDSÆT API URL"
+VITE_API_URL="http://localhost:5000/api/v1/"
 ```
