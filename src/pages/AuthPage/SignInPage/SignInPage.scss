@@ -25,6 +25,12 @@
     cursor: pointer;
     font-weight: bold;
     height: 36px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
   }
   &_Container {
     display: flex;
