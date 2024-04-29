@@ -1,6 +1,7 @@
 name: Greetings
 
-on: [pull_request_target, issues]
+on: 
+  workflow_dispatch:
 
 jobs:
   greeting:
@@ -13,9 +14,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Message that will be displayed on users' first issue"
-        pr-message: "Message that will be displayed on users' first pull request"
-    - name: Deploy react app to github pages
-  # You may pin to the exact commit or the version.
-    # uses: tanwanimohit/deploy-react-to-ghpages@88c048cc9d31f67a792eec8cf9e94c10eb701dd2
-    - uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
-          
+        pr-message: "Message that will be displayed on users' first pull request"        
